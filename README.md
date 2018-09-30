@@ -15,3 +15,10 @@ As per design details:
 1. We have a BitCoindData which is a POJO to store the data relevant according to ur needs.
 2. There is a BitCoinDataController which is basically the  component class having path mappings
 3. There is BitCoinService which has the method implementations for the GET calls
+
+
+With current implementations there are few assumptions:
+1.The data currently taken from cryptocompare api are meant to change any time.
+2.For more proper stable environment, data must be stored in a DB which must be used by the sevice class to populate the POJOs.
+3. there is no web.xml file created, as spring boot is taking care of the mappings
+4. NO front end for the applications, calls needs to be made after checking the mapping paths.
